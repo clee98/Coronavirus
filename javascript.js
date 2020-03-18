@@ -14,7 +14,9 @@ $.ajax({
       for(const key of okeys){
           console.log(key)
           console.log(info[key])
-          $(".totals").append(`<li>${key}</li>`)
+          if(key != "source"){
+            $(".totals").append(`<li>${key} : ${info[key]}</li>`)
+          }
       }
 
    
