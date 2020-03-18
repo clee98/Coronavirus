@@ -1,7 +1,7 @@
 $.ajax({
-    url: 'https://thevirustracker.com/free-api?countryTimeline=US',
+    url: 'https://thevirustracker.com/free-api?countryTimeline= ',
     dataType: 'json',
     success: function(data) {
-      console.log(x);
+      console.log(data);
     }
   });
