@@ -1,4 +1,10 @@
 $.ajax({
+<<<<<<< HEAD
+    url: 'https://thevirustracker.com/timeline/map-data.json',
+    dataType: 'json',
+    success: function(data) {
+      console.log(data);
+=======
     url: 'https://thevirustracker.com/free-api?global=stats',
     dataType: 'json',
     success: function(data) {
@@ -22,6 +28,7 @@ $.ajax({
    
 
 
+>>>>>>> 67bb8443ff809071e9a17748dbc002c4e45724b4
     }
   });
 
