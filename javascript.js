@@ -1,10 +1,4 @@
 $.ajax({
-<<<<<<< HEAD
-    url: 'https://thevirustracker.com/timeline/map-data.json',
-    dataType: 'json',
-    success: function(data) {
-      console.log(data);
-=======
     url: 'https://thevirustracker.com/free-api?global=stats',
     dataType: 'json',
     success: function(data) {
@@ -16,6 +10,7 @@ $.ajax({
     //   console.log(info)
 
       const okeys = Object.keys(info)
+      const oentries = Object.entries(info)
 
       for(const key of okeys){
         //   console.log(key)
@@ -24,11 +19,20 @@ $.ajax({
             $(".totals").append(`<li>${key} : ${info[key]}</li>`)
           }
       }
+      for(const key of okeys){
+        if(key!="source"){
+          $("#firstTr").append(`<th scope="col">${key}</th>`)
+        }
+      }
 
+      for(const [key,value] of oentries){
+        if(key!="source"){
+          $("#secondTr").append(`<td> ${[value]} </td>`)
+        }
+      }
    
 
 
->>>>>>> 67bb8443ff809071e9a17748dbc002c4e45724b4
     }
   });
 
